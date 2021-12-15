@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/phosphor-icons"></script>
+    <script defer src="./script.js"></script>
+    <title>Camera App</title>
+</head>
+<body>
+
+    <div class="error-cont hide">Something went wrong</div>
+
+    <div class="start-container">
+        <div class="headText">Free Screen Recorder + WebCam</div>
+        <div class="line"></div>
+        <img src="/img/mac.png" class="monitor" alt="Monitor">
+        <i class="ph-microphone mic-icon"></i>
+        <button class="startBtn uplift"></button>
+        <p class="startText uplift">Click to start recording</p>
+    </div>
+
+    <div class="options-container">
+        <div data-option=0 class="option">
+            <i class="ph-camera option-icons"></i>
+            <p class="option-text">WebCam Only</p>
+        </div>
+        <div data-option=1 class="option">
+            <i class="ph-monitor option-icons"></i>
+            <p class="option-text">Screen Only</p>
+        </div>
+        <div data-option=2 class="option selected">
+            <div class="cameraPlusMonitor">
+                <i class="ph-camera option-icons"></i>
+                <i class="ph-monitor option-icons"></i>
+            </div>
+            <p class="option-text">Screen + WebCam</p>
+        </div>
+    </div>
+
+    <div class="inprogress-container hide">
+        <div class="record-btn-container">
+            <div class="record-btn rec-animate"></div>
+            <span class="headText">Recording in progress</span>
+        </div>
+        <div class="countDown">00:00</div>
+        <button class="stopRec">Stop Recording</div>
+    </div>
+
+    <div class="saveVideo-container hide">
+        <div class="saveVideo-head">
+            <i class="ph-house"></i>
+            <span class="headText">Here is your video</span>
+        </div>
+        <video src="" controls class="save-vid"></video>
+        <a href="" class="saveBtnLink"><button class="saveBtn-container">▼ Save</button></a>
+    </div>
+
+    <div class="vid-container">
+        <video autoplay id="cameraRecord" muted="muted" src=""></video>
+    </div>
+</body>
+</html>

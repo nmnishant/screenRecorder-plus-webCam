@@ -1,0 +1,308 @@
+* {
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    background-color: #3B82F6;
+}
+
+#cameraRecord {
+    width: 250px;
+    height: 200px;
+    /* border-radius: 100px; */
+    /* border: 1px solid white; */
+    object-fit:cover;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    transform: scaleX(-1);
+    z-index: -1;
+}
+
+.action-btns {
+    height: 12rem;
+    width: 5rem;
+    /* background-color: aqua; */
+    position: absolute;
+    right: 4rem;
+    top: calc( (100vh - 12rem) / 2 );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.action-btns > * {
+    /* background-color: chartreuse; */
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50px;
+    border: 5px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.record-btn{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: crimson;
+    border-radius: 50px;
+    margin: 55px 15px 0px 0px;
+}
+
+.capture-btn{
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.rec-animate {
+    animation-name: animate;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+.cap-animate {
+    animation-name: animate;
+    animation-duration: 1s;
+}
+
+@keyframes animate{
+    0% {
+        transform: scale(0.5);
+    }
+    100% {
+        transform: scale(1.2);
+    }
+}
+
+.start-container,.inprogress-container,.saveVideo-container {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.saveVideo-container {
+    align-items: normal;
+}
+
+.saveVideo-head{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.ph-house{
+    color: whitesmoke;
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin-right: 2rem;
+    margin-top: 40px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.headText {
+    font-size: 2rem;
+    padding-top: 50px;
+    color: white;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #60A5FA;
+}
+
+.monitor{
+    width: 400px;
+    height: 350px;
+}
+
+.startBtn{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.mic-icon{
+    font-size: 6rem;
+    color: whitesmoke;
+    position: relative;
+    bottom: 265px;
+}
+
+.mic-icon:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.mic-disabled{
+    color: #e74c3c;
+}
+
+.startText{
+    color: #E5E7EB;
+}
+
+.record-btn-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.inprogress-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.countDown {
+    padding-top: 20px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+.stopRec {
+    cursor: pointer;
+    position: absolute;
+    background-color: crimson;
+    bottom: 50px;
+    font-size: 1.5rem;
+    color: white;
+    padding: 10px 20px 10px 20px;
+    border-radius: 20px;
+}
+
+.save-vid {
+    margin-top: 30px;
+    height: 500px;
+}
+
+.saveBtn-container{
+    width: 100%;
+    color: white;
+    font-size: 1.5rem;
+    border: 1px solid whitesmoke;
+    margin-top: 30px;
+    padding : 10px 30px 10px 30px;
+    background : transparent;
+    cursor: pointer;
+}
+
+.saveBtn-container{
+    margin-bottom: 5rem;
+}
+
+.saveBtn-container:hover{
+    transform: scale(1.05);
+}
+
+.saveBtnLink{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.option {
+    color: whitesmoke;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border-right: 1px solid whitesmoke; */
+    margin-right: 80px;
+    padding: 0px 30px 0px 30px;
+    border-radius: 30px;
+    /* font-weight: 100; */
+    cursor: pointer;
+    background-color: #60A5FA;
+}
+
+.option:hover {
+    transform : scale(1.1);
+}
+
+.option:nth-child(3){
+    margin-top: 50px;
+    position: relative;
+    border-right: none;
+    padding-left: 80px;
+}
+
+.option:nth-child(3) > p{
+    position: relative;
+    right: 30px;
+}
+
+.option-icons {
+    font-size: 8rem;
+    /* border-bottom: 1px solid whitesmoke; */
+}
+
+.cameraPlusMonitor > .ph-monitor {
+    position: relative;
+    left: -60px;
+    top: -7px;
+}
+
+.options-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 600px;
+}
+
+.selected {
+    background-color: #2563EB;
+}
+
+.uplift{
+    position: relative;
+    bottom: 3rem;
+}
+
+.error-cont{
+    height: 3rem;
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: whitesmoke;
+    box-shadow: rgba(36, 33, 33, 0.3) 2px 2px;
+    background-color: #e74c3c;
+    animation: error;
+    animation-duration: 0.5s;
+}
+
+@keyframes error {
+    0%{
+        right: 0rem;
+    }
+    100%{
+        right: 3rem;
+    }
+}
+
+.hide {
+    display: none;
+}
