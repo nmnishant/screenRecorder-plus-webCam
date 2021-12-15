@@ -23,6 +23,7 @@ body {
     bottom: 50px;
     transform: scaleX(-1);
     z-index: -1;
+    opacity: 0;
 }
 
 .action-btns {
