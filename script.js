@@ -36,6 +36,7 @@ stopRecBtn.addEventListener('click', (e) => {
     inProgressContainer.classList.add('hide');
     saveVideoContainer.classList.remove('hide');
     recorder.stop();
+    document.querySelector('.save-vid').src = '';
     document.querySelector('.saveBtnLink').setAttribute('href', '');
     countDown.innerHTML = '00:00';
 });
