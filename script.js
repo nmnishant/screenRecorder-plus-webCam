@@ -36,9 +36,6 @@ stopRecBtn.addEventListener('click', (e) => {
     inProgressContainer.classList.add('hide');
     saveVideoContainer.classList.remove('hide');
     recorder.stop();
-    document.querySelector('.save-vid').src = '';
-    document.querySelector('.saveBtnLink').setAttribute('href', '');
-    countDown.innerHTML = '00:00';
 });
 
 optionContainer.addEventListener('click', (e) => {
@@ -146,6 +143,9 @@ async function getAudioTrack(){
 }
 
 function setDefaultUI(){
+    document.querySelector('.save-vid').src = '';
+    document.querySelector('.saveBtnLink').setAttribute('href', '');
+    countDown.innerHTML = '00:00';
     startContainer.classList.remove('hide');
     optionContainer.classList.remove('hide');
     inProgressContainer.classList.add('hide');
