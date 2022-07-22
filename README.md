@@ -1,4 +1,4 @@
-# <a href="https://https://nm-recorder.netlify.app"><img src="https://nm-recorder.netlify.app/img/favicon.png" style="height:45px"> NM Recorder | Free Screen Recorder + Camera </a>
+# <a href="https://nm-recorder.netlify.app"><img src="https://nm-recorder.netlify.app/img/favicon.png" style="height:45px"> NM Recorder | Free Screen Recorder + Camera </a>
 Its a webapp for recording your screen with or without camera, with or without mic, or camera only
 
 <br>
